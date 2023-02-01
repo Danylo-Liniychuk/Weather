@@ -1,0 +1,48 @@
+*{
+    font-family: 'Rubik';
+}
+
+.logo{ 
+    border-radius: 16px;
+    background-color: rgb(53,69,94);
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    img {
+        width: 80%;
+    }
+}
+
+
+.App {
+    background-color: rgb(11, 19, 30);
+    height: 100vh;
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.divider{
+    width: 1px;
+    height: 90%;
+    background-color: rgba(221, 224, 228, .3);
+    border-radius: 50%;
+    &-horizont {
+        height: 1px;
+        width: 95%;
+        background-color: rgba(221, 224, 228, .1);
+    }
+}
+
+@import url('./blocks/nav.scss');
+@import url('./blocks/content.scss');
+@import url('./blocks/total.scss');
+@import url('./blocks/weakForecast.scss');
+@import url('./blocks/todayForecast.scss');
