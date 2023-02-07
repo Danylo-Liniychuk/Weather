@@ -1,16 +1,18 @@
 import React from "react";
 import Nav from "./Navigation";
-import Content from "./ContentBox";
-import Weak from "./WeakForecast";
-import "../style/style.scss"
+import WeatherPage from "../pages/WeatherPage";
+import Cities from "../pages/CitiesPage";
+import { useSelector } from "react-redux";
+import "../style/style.scss";
 
 const App = () => {
+    const selectPage = useSelector((state) => state.currentPage);
 
     return (
         <div className="App">
             <Nav/>
-            <Content/>
-            <Weak/>
+            {(selectPage === 'Weather') ? <WeatherPage/>: null}
+            {(selectPage === 'Cities') ? <Cities/>: null}
         </div>
     )
 }

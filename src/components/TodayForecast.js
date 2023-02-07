@@ -1,16 +1,17 @@
 import React from "react";
-import sunny from '../assets/icons/sunny.svg'
+import { useSelector } from "react-redux";
 
 
-const Today = () => {
-    const arr = ['6:00', '25', sunny ]
+const Today = ({props}) => {
     const list = [];
-    for (let i = 0; i < 6; i++) {
-        list.push(listItem(arr[0], arr[1], arr[2]))
-    }
+    const totalPage = useSelector(state => state.currentPage); 
+
+    props.forEach(item => {
+        list.push(listItem(item[0], item[1], item[2]))
+    })
     return(
-        <div className="forecast">
-            <h3>TODAY'S FORECAST</h3>
+        <div className={(totalPage === 'Cities') ? "forecast forecast-city" : 'forecast'}>
+            <h3 id = {(totalPage === 'Cities') ? "todayh3" : null}>TODAY'S FORECAST</h3>
             <div className="forecast_wrapper">
                 {list}
             </div>
@@ -18,16 +19,16 @@ const Today = () => {
     )
 }
 
-function listItem (time, temp, src) {
+function listItem (time, temp, src, key) {
 
     return(
         <>
-            <div class="forecast_item">
-                <div class="forecast_time">{time} AM</div>
+            <div className="forecast_item" key={key}>
+                <div className="forecast_time">{time} AM</div>
                 <img src={src} alt="status"/>
-                <div class="forecast_temperature">{temp} &#176;</div>
+                <div className="forecast_temperature">{temp}&#176;</div>
             </div>
-            <div class="divider"></div>
+            <div className="divider"></div>
         </>
     )
 }

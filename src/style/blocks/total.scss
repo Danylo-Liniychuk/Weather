@@ -4,6 +4,10 @@
     justify-content: space-between;
     height: 30%;
     padding: 20px 40px 10px 40px;
+    &-padding0 {
+        width: 100%;
+        padding: 10px 0 10px 0;
+    }
     &_forecast {
         display: flex;
         justify-content: space-around;

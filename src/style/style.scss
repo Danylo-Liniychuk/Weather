@@ -34,9 +34,20 @@
     height: 90%;
     background-color: rgba(221, 224, 228, .3);
     border-radius: 50%;
+    &:last-child {
+        display: none;
+    }
     &-horizont {
         height: 1px;
         width: 95%;
+        background-color: rgba(221, 224, 228, .1);
+        &:last-child {
+            display: none;
+        }
+    }
+    &-city {
+        height: 2px;
+        width: 100%;
         background-color: rgba(221, 224, 228, .1);
     }
 }
@@ -46,3 +57,6 @@
 @import url('./blocks/total.scss');
 @import url('./blocks/weakForecast.scss');
 @import url('./blocks/todayForecast.scss');
+@import url('./blocks/airCondition.scss');
+@import url('./blocks/city.scss');
+@import url('./blocks/cityForecast.scss');
