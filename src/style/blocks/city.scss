@@ -4,7 +4,6 @@
         margin-top: 20px;
         width: 101%;
         height: 100%;
-        overflow-block: scroll;
         overflow-y: auto;
         &::-webkit-scrollbar {
             width: 5px;
@@ -31,6 +30,10 @@
         background-color: rgb(32, 43, 59);
         &:first-child {
             margin-top: 0;
+        }
+        &-map {
+            width: 98%;
+            height: 20%; 
         }
     }
     &_info{

@@ -8,7 +8,7 @@
     padding-top: 20px;
     &_wrapper{
         display: flex;
-        flex-direction: column;   
+        flex-direction: column;
     }
     &_item {
         display: flex;
@@ -21,12 +21,22 @@
         height: 50px;
         margin-bottom: 25px;
         cursor: pointer;
-        img {
-            width: 30%;
+        svg {
+            width: 40% !important;
         }
         &-active {
             color: #FFFF;
             font-weight: 600;
+        }
+    }
+    &_image {
+        stroke: #A29993;
+        &-active {
+            stroke: #fff;
+            fill: #fff !important;
+        }
+        &-activeNoFill {
+            stroke: #fff;
         }
     }
 }

@@ -29,6 +29,7 @@
     box-sizing: border-box;
 }
 
+
 .divider{
     width: 1px;
     height: 90%;
@@ -60,3 +61,5 @@
 @import url('./blocks/airCondition.scss');
 @import url('./blocks/city.scss');
 @import url('./blocks/cityForecast.scss');
+@import url('./blocks/map.scss');
+@import url('./blocks/settings.scss');

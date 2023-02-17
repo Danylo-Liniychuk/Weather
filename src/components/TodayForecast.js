@@ -6,8 +6,8 @@ const Today = ({props}) => {
     const list = [];
     const totalPage = useSelector(state => state.currentPage); 
 
-    props.forEach(item => {
-        list.push(listItem(item[0], item[1], item[2]))
+    props.forEach((item, index )=> {
+        list.push(listItem(item[0], item[1], item[2], index))
     })
     return(
         <div className={(totalPage === 'Cities') ? "forecast forecast-city" : 'forecast'}>

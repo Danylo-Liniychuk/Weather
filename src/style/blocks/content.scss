@@ -5,6 +5,7 @@
     justify-content: space-between;
     &-withoutJC {
         justify-content: flex-start;
+        position: relative;
     }
     .search {
         width: 100%;
